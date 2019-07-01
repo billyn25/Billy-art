@@ -81,8 +81,12 @@ form.addEventListener('submit', function (e) {
         e.preventDefault();
     } else if (status ==="yes"){
         setTimeout(function(){
-            swal("Mensaje", "Tu email ha sido enviado correctamente!", "success");
+            window.scrollTo(0,0);
         }, 1000);
+        setTimeout(function(){
+            swal("Mensaje", "Tu email ha sido enviado correctamente!", "success");
+            document.getElementById("form").reset();
+        }, 1500);
         e.preventDefault();
     }
 });
